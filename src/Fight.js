@@ -6,6 +6,10 @@ class Fight {
         this.round = 1
     }
 
+
+    /**
+     * Lance les tours de combats et affiche les scores
+     */
     launch() {
         let damage
 
@@ -28,10 +32,26 @@ class Fight {
         console.log(`💀 The looser is ${this.score().looser.name} 💀`);
     }
 
+
+    /**
+     * Permet d'afficher le résultat de l'affrontement
+     *
+     * @param Fighter fighter1
+     * @param Fighter fighter2
+     * @param Number damage
+     *
+     * @returns String
+     */
     roundDisplay(fighter1, fighter2, damage) {
         return `${fighter1.name} 🗡️  ${fighter2.name} => ${damage} points of damage 💙 ${fighter2.name} : ${fighter2.life}`
     }
 
+
+    /**
+     * Permet de déterminer le winner et le looser du combat
+     *
+     * @returns Object
+     */
     score(){
         return this.attacker.isAlive() ? {
             winner: this.attacker,
