@@ -1,6 +1,6 @@
 # Travaux d'Héraclès #2 : le sanglier d'Érymanthe
 
-Prérequis : cloner ce repository.
+Prérequis : cloner ce _dépôt_.
 
 ## État des lieux du projet
 
@@ -21,7 +21,7 @@ Tout d'abord, il va falloir t'ajouter une épée.
 	 this.weapon = weapon
    }
    ```
-5. Dans le fichier *index.js*, instancie un objet de type `Weapon` et associe le à Héraclès via la méthode `setWeapon()`.
+5. Dans le fichier *index.js*, instancie un objet de type `Weapon` avec le nom "Épée", un dommage de 10 et l'image "sword.svg" qui se trouve dans le dossier images. Ensuite associe-le à Héraclès via la méthode `setWeapon()`.
 6. Pour le moment, l'épée a été attribuée mais elle ne t'apporte aucun avantage. Retourne dans la class `Fighter`, nous allons modifier un peu le comportement de la méthode `fight()`.
 Créé tout d'abord une méthode `getDamage()`. Celle-ci doit retourner la force (*strength*) du Fighter, à laquelle tu vas ajouter les dommages provenant de l'arme (dans le cas où il en porte une).
 7. Dans la méthode `fight()`, utilise cette méthode `getDamage()` pour déterminer les dégâts infligés par le combattant. Ainsi les dégâts infligés (via le `rand()`) seront compris entre 1 et `getDamage()` (la force + les dégâts de l'arme) et non plus juste la force.
@@ -35,10 +35,9 @@ Tu vas refaire quasiment la même chose pour gérer cette fois-ci un bouclier. L
 
 1. Créé une classe `Shield` avec une propriété `protection` initialisée à 10, et une propriété image utilisant 'shield.svg'.
 2. Dans `Fighter`, ajoute une propriété `shield` avec son *setter* associé. Puis créé une méthode `getDefense()`, additionnant la dextérité et la protection du bouclier (si le héros en porte un). Cette méthode sera également utilisée dans `fight()` (à la place du simple appel à `defender.dexterity`) afin que le bouclier puisse jouer son rôle protecteur.
+3. Comme pour l'arme, pense à instancier un bouclier et à l'associer à Héraclès avec le setter.
 
 
 ## Prêt au combat.
 
 Réactualise la page, tu fais maintenant beaucoup plus de dégâts et tu es mieux protégé, tu devrais gagner le combat sans trop de difficultés !
-
-N'hésite pas à jouer avec ce code pour aller plus loin, une correction te sera fournie pour le prochain atelier.

@@ -1,43 +1,43 @@
-# Travaux d'Héraclès #2 : le sanglier d'Érymanthe
+# Labours of Heracles #2: the boar of Erymanthe
 
-Prérequis : cloner ce repository.
+Prerequisite: clone this _repository_.
 
-## État des lieux du projet
+## State of the project
 
-Héraclès doit maintenant vaincre le sanglier d'Érymanthe 🐗, énorme bête qui terrifie les habitants du mont Erymanthe en Arcadie.
+Heracles must now defeat the Erymanthian boar 🐗 a huge beast that terrifies the inhabitants of Mount Erymanthus in Arcadia.
 
-## À toi de jouer : Un peu d'équipement pour attaquer
+## Your turn to play: A little bit of equipment to attack
 
-Les caractéristiques de force et de dextérité du sanglier sont bien supérieures aux tiennes, impossible de le battre dans ces conditions, tes poings ne suffiront pas ! Il va falloir que tu t'équipes en conséquence !
+The boar's strength and dexterity are far superior to yours, it's impossible to beat it in these conditions, your fists won't be enough! You will have to equip yourself accordingly!
 
-Tout d'abord, il va falloir t'ajouter une épée.
+First of all, you'll have to add a sword.
 
-1. Créé une nouvelle classe `Weapon` dans le dossier *src/*.
-2. Celle-ci va correspondre à l'arme dont tu vas équiper les combattants. Elle doit avoir un nom et une propriété `damage` initialisée à 10 et une propriété image utilisant 'sword.svg'.
-3. Pour ajouter l'arme au personnage, dans la classe `Fighter`, on crée une propriété `weapon`. Celle-ci sera initialisée à `null`.
-4. Créé une méthode `setWeapon()` afin d'attribuer cette arme au combattant. Cela s'appelle un *setter* en POO. Cela va prendre une forme comme ça :
+1. Create a new class `Weapon` in the *src/* folder.
+2. This one will correspond to the weapon you will equip the fighters with. It must have a name and a `damage` property initialized to 10 and an image property using 'sword.svg'.
+3. To add the weapon to the character, in the `Fighter` class, we create a `weapon` property. This will be initialized to `null`.
+4. Create a `setWeapon()` method to assign this weapon to the fighter. This is called a *setter* in OOP. It will look like this:
    ```javascript
    setWeapon(weapon) {
 	 this.weapon = weapon
    }
    ```
-5. Dans le fichier *index.js*, instancie un objet de type `Weapon` avec le nom "Épée", un dommage de 10 et l'image "sword.svg" qui se trouve dans le dossier images. Ensuite associe-le à Héraclès via la méthode `setWeapon()`.
-6. Pour le moment, l'épée a été attribuée mais elle ne t'apporte aucun avantage. Retourne dans la class `Fighter`, nous allons modifier un peu le comportement de la méthode `fight()`.
-Créé tout d'abord une méthode `getDamage()`. Celle-ci doit retourner la force (*strength*) du Fighter, à laquelle tu vas ajouter les dommages provenant de l'arme (dans le cas où il en porte une).
-7. Dans la méthode `fight()`, utilise cette méthode `getDamage()` pour déterminer les dégâts infligés par le combattant. Ainsi les dégâts infligés (via le `rand()`) seront compris entre 1 et `getDamage()` (la force + les dégâts de l'arme) et non plus juste la force.
+5. In the *index.js* file, instantiate an object of type `Weapon` with the name "Sword", a damage of 10 and the image "sword.svg" which is located in the images folder. Then associate it with Heracles via the `setWeapon()` method.
+6. At the moment, the sword has been assigned but it doesn't give you any advantage. Back in the `Fighter` class, we'll modify the behavior of the `fight()` method a bit.
+First, create a `getDamage()` method. This should return the strength (*strength*) of the Fighter, to which you will add the damage from the weapon (if it carries one).
+7. In the `fight()` method, use this `getDamage()` method to determine the damage inflicted by the fighter. Thus the damage inflicted (via `rand()`) will be between 1 and `getDamage()` (the strength + the weapon damage) and not just the strength.
 
-> Tout ce calcul pourrait être réalisé directement dans `fight()`, mais l'utilisation de la méthode `getDamage()` permet de simplifier la méthode `fight()` et de déporter la logique de calcul des dommages ailleurs. De plus, il est maintenant possible d'utiliser `getDamage()` indépendamment de `fight()`, ce qui sera utile par la suite.
-
-
-## Et la défense dans tout ça ?
-
-Tu vas refaire quasiment la même chose pour gérer cette fois-ci un bouclier. Les étapes sont ici volontairement données dans les grandes lignes.
-
-1. Créé une classe `Shield` avec une propriété `protection` initialisée à 10, et une propriété image utilisant 'shield.svg'.
-2. Dans `Fighter`, ajoute une propriété `shield` avec son *setter* associé. Puis créé une méthode `getDefense()`, additionnant la dextérité et la protection du bouclier (si le héros en porte un). Cette méthode sera également utilisée dans `fight()` (à la place du simple appel à `defender.dexterity`) afin que le bouclier puisse jouer son rôle protecteur.
-3. Comme pour l'arme, pense à instancier un bouclier et à l'associer à Héraclès avec le setter.
+> All this calculation could be done directly in `fight()`, but using the `getDamage()` method simplifies the `fight()` method and moves the damage calculation logic elsewhere. Furthermore, it is now possible to use `getDamage()` independently of `fight()`, which will be useful later.
 
 
-## Prêt au combat.
+## And the defense in all this?
 
-Réactualise la page, tu fais maintenant beaucoup plus de dégâts et tu es mieux protégé, tu devrais gagner le combat sans trop de difficultés !
+You will do almost the same thing to manage this time a shield. The steps are voluntarily given here in outline.
+
+1. Create a `Shield` class with a `protection` property set to 10, and an image property using 'shield.svg'.
+2. In `Fighter`, add a `shield` property with its associated *setter*. Then create a `getDefense()` method, adding dexterity and shield protection (if the hero is wearing one). This method will also be used in `fight()` (instead of the simple call to `defender.dexterity`) so that the shield can play its protective role.
+3. As for the weapon, remember to instantiate a shield and associate it to Heracles with the setter.
+
+
+## Ready to fight.
+
+Refresh the page, you now do a lot more damage and you are better protected, you should win the fight without too much difficulty!
