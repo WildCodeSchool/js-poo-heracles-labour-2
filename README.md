@@ -28,8 +28,9 @@ First, create a `getDamage()` method. This should return the strength (*strength
 You will do almost the same thing to manage this time a shield. The steps are voluntarily given here in outline.
 
 1. Create a `Shield` class with a `protection` property set to 10.
-2. In `Fighter`, add a `shield` property. Then create a `getDefense()` method, adding dexterity and shield protection (if the hero is wearing one). This method will also be used in `fight()` (instead of the simple call to `defender.dexterity`) so that the shield can play its protective role.
-3. As for the weapon, remember to instantiate a shield and associate it to Heracles.
+2. In `Fighter`, add a `shield` property. 
+3. Then create a `getDefense()` method, adding dexterity and shield protection (if the hero is wearing one). This method will also be used in `fight()` (instead of the simple call to `defender.dexterity`) so that the shield can play its protective role.
+4. As for the weapon, remember to instantiate a shield and associate it to Heracles.
 
 
 ## Ready to fight.
