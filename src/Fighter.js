@@ -20,7 +20,7 @@ class Fighter {
     }
 
 
-    // Generate a ramdom value between 1 and max
+    // Generate a random value between 1 and max
     // Génère une valeur aléatoire entre 1 et max
     getRandomInt(max) {
         return 1 + Math.floor(Math.random() * max);
