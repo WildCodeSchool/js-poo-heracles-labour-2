@@ -10,7 +10,6 @@ class Fighter {
 
 
     // Launch a fight
-    // Lance un combat
     fight(defender) {
         const attackPoints = this.getRandomInt(this.strength);
 
@@ -21,14 +20,12 @@ class Fighter {
 
 
     // Generate a random value between 1 and max
-    // Génère une valeur aléatoire entre 1 et max
     getRandomInt(max) {
         return 1 + Math.floor(Math.random() * max);
     }
 
 
     // Determine if a fighter is still alive
-    // Permet de déterminer si un combattant est encore en vie
     isAlive() {
         return this.life > 0;
     }
