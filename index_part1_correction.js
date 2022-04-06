@@ -1,34 +1,34 @@
 const Fighter = require("./src/Fighter.js");
 
-/** Création d'Héraclès  */
+/** Create Heracles  */
 const heracles = new Fighter("🧔 Heracles", 20, 6);
 
-/** Création de l'adversaire  */
+/** Create the opponent  */
 const nemean = new Fighter("🦁 The Nemean Lion", 11, 13);
 
 /**
- * Permet d'afficher le résultat de l'affrontement
+ * Helper to produce the result of a round
  */
 const roundDisplay = (fighter1, fighter2) => {
     return `${fighter1.name} 🗡️  ${fighter2.name} 💙 ${fighter2.name} : ${fighter2.life}`;
 };
 
 /**
- * Permet de déterminer le winner et le looser du combat
+ * Helper to dispatch fighters between winner and loser
  */
 const score = (fighter1, fighter2) => {
     return fighter1.isAlive() ? {
         winner: fighter1,
-        looser: fighter2,
+        loser: fighter2,
     } : {
         winner: fighter2,
-        looser: fighter1
+        loser: fighter1
     };
 };
 
 
 
-// Lancement du combat
+// Let's fight !!!
 {
     let round = 0;
 
@@ -46,6 +46,6 @@ const score = (fighter1, fighter2) => {
 
     const result = score(heracles, nemean);
 
-    console.log(`💀 ${result.looser.name} is dead`);
+    console.log(`💀 ${result.loser.name} is dead`);
     console.log(`🏆 ${result.winner.name} wins (💙 ${result.winner.life} )`);
 }
