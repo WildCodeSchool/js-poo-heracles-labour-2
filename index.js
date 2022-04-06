@@ -4,7 +4,7 @@ const Fighter = require("./src/Fighter.js");
 const heracles = new Fighter("🧔 Heracles", 20, 6);
 
 /** Création de l'adversaire  */
-const boar = new Fighter('Erymanthian Boar', 25, 12);
+const boar = new Fighter("🐗 Erymanthian Boar", 25, 12);
 
 /**
  * Permet d'afficher le résultat de l'affrontement
